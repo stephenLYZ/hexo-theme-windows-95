@@ -1,3 +1,10 @@
-.DS_Store
-node_modules/
+.DS_STORE
 *.log
+node_modules
+temp
+.tmp
+dist
+.sass-cache
+build/*
+reports
+coverage
