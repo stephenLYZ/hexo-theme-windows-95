@@ -1,7 +1,7 @@
 {
   "name": "Fake-AMD",
   "version": "1.0.0",
-  "description": "",
+  "description": "A AMD loader",
   "main": "FakeAMD.js",
   "directories": {
     "example": "example"
