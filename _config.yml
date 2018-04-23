@@ -1,0 +1,13 @@
+# html lang
+language: en
+
+# site name
+site_name: "stephen's blog"
+
+# main menu navigation
+menu:
+  首页: /
+  关于: /about
+
+# Miscelaneous
+favicon: /favicon.ico

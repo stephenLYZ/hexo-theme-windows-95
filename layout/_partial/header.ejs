@@ -1,0 +1,56 @@
+<div class="wrapper">
+    <div class="default_title">
+        <img src="/imgs/mycomputer.png" />
+        <h1><%= page.tag || theme.site_name %></h1>
+    </div>
+    <ul class="topbar">
+    <% for(name in theme.menu) { %>
+        <li>
+        <a href="<%- url_for(theme.menu[name]) %>" class="item-link"><%- name %></a>
+        </li>
+    <% } %>
+    </ul>
+    <div class="tag_list">
+    <ul id="tag-list">
+        <li><a href="/" ><img src="/imgs/disk.png" />(C:)</a>
+        <ul>
+        <% site.tags.map(function(tag){  %>
+            <li>
+            <a href="<%- url_for('/tags/' + tag.name) %>" title="<%= tag.name %>" rel="<%= tag.length %>">
+                <img src="/imgs/folder.ico" />
+                <%= tag.name %>
+            </a>
+            </li>    
+        <% }) %>
+        </ul>
+    </ul>
+    </div>
+    <div class="post_list">
+    <ul>
+        <% if(page.posts) { page.posts.map(function(post){  %>
+        <li>
+            <a href="<%- config.root %><%- post.path %>">
+            <img src="/imgs/file.ico" />
+            <%- post.title || __('untitled') %>
+            </a>
+        </li>
+        <% })} else { site.posts.map(function(post){ %>
+            <li>
+            <a href="<%- config.root %><%- post.path %>">
+            <img src="/imgs/file.ico" />
+                <%- post.title || __('untitled') %>
+            </a>
+            </li>
+        <% })} %>
+    </ul>
+    </div>
+
+    <div class="post_total">
+        <% if(page.tag){ %>
+            <div class="left"><%- site.tags[page.tag] %> object(s)</div>
+        <% } else { %>
+            <div class="left"><%- site.posts %> object(s)</div>
+        <% } %>
+        <div class="right">&nbsp;</div>
+    </div>
+</div>

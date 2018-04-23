@@ -1,0 +1,14 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="<%= config.description %>">
+  <meta name="keywords" content="<%= config.keywords %>">
+  <% if (theme.favicon){ %>
+    <link rel="icon" href="<%- config.favicon %>">
+  <% } %>
+  <title><%= page.title || theme.site_name %></title>
+  <%- css(['css/style', 'css/atom-one-light', 'css/font-awesome.min.css']) %>
+  <%- js('js/highlight.min.js') %>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>

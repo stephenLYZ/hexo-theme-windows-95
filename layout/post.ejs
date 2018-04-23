@@ -1,0 +1,15 @@
+<div class="content">
+    <div class="post_title">
+      <img src="/imgs/file.png" />
+      <h1><%=  page.title  %></h1>
+      <a href="/"><div class="btn"><span class="fa fa-times"></span></div></a>
+      <div class="btn btn_max"><span class="fa fa-window-maximize"></span></div>
+      <div class="btn"><span class="fa fa-window-minimize"></span></div>
+    </div>
+    <ul class="topbar">
+      <li><%= page.date %></li>
+    </ul>
+    <div class="post_content">
+      <%- page.content %>
+    </div>
+</div>
