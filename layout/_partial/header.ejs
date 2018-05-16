@@ -47,9 +47,11 @@
 
     <div class="post_total">
         <% if(page.tag){ %>
-            <div class="left"><%- site.tags[page.tag] %> object(s)</div>
+            <div class="left"><%- site.tags.filter(function(tag) {
+                return tag.name === page.tag
+            }).data[0].length %> object(s)</div>
         <% } else { %>
-            <div class="left"><%- site.posts.length || site.posts %> object(s)</div>
+            <div class="left"><%- site.posts.length %> object(s)</div>
         <% } %>
         <div class="right">&nbsp;</div>
     </div>
