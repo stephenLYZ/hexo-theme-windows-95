@@ -49,7 +49,7 @@
         <% if(page.tag){ %>
             <div class="left"><%- site.tags[page.tag] %> object(s)</div>
         <% } else { %>
-            <div class="left"><%- site.posts %> object(s)</div>
+            <div class="left"><%- site.posts.length || site.posts %> object(s)</div>
         <% } %>
         <div class="right">&nbsp;</div>
     </div>
